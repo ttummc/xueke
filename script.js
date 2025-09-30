@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// 2. 滚动时导航栏样式变化（可选）
+// 2. 滚动时导航栏样式变化
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -31,9 +31,8 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// 给需要动画的元素添加监听（比如特色卡片、功能项）
 document.querySelectorAll('.feature-card, .function-item, .scene-card').forEach(el => {
-    el.classList.add('hidden'); // 初始隐藏
+    el.classList.add('hidden');
     observer.observe(el);
 });
 
