@@ -612,16 +612,126 @@ section {
     color: #fff;
 }
 
-/* 响应式优化 */
-@media (max-width: 900px) {
+/* --- Material You 进一步优化 --- */
+
+/* 统一卡片与按钮阴影和圆角 */
+.feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
+    border-radius: 28px !important;
+    box-shadow: 0 6px 32px rgba(103,80,164,0.12) !important;
+    background: var(--surface-color) !important;
+    border: 1.5px solid var(--border-color) !important;
+}
+
+/* 卡片悬停更明显 */
+.feature-card:hover, .scene-card:hover {
+    box-shadow: 0 12px 36px rgba(103,80,164,0.18) !important;
+    transform: translateY(-6px) scale(1.03);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+/* 按钮更大更圆润，提升可点性 */
+.btn, .experience-btn {
+    border-radius: 28px !important;
+    font-size: 1.12rem !important;
+    padding: 16px 40px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.04em;
+    background: linear-gradient(90deg, var(--primary-color) 60%, #7f67be 100%) !important;
+    color: var(--on-primary) !important;
+    box-shadow: 0 4px 16px rgba(103,80,164,0.13) !important;
+    border: none !important;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.btn:active, .experience-btn:active {
+    transform: scale(0.98);
+}
+
+/* section 间隔和背景更柔和 */
+section {
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+}
+.features, .about, .functions {
+    background: linear-gradient(120deg, var(--surface-variant) 80%, #ede7f6 100%) !important;
+}
+.scenes, .experience {
+    background: var(--surface-color) !important;
+}
+
+/* 标题更突出 */
+.section-title, .hero-content h1, .about-text h2, .experience-content h2 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: var(--primary-color);
+    text-shadow: 0 2px 8px rgba(103,80,164,0.06);
+}
+
+/* 细节色彩优化 */
+.feature-icon, .scene-icon {
+    color: var(--primary-color) !important;
+    background: #ede7f6;
+    border-radius: 50%;
+    padding: 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(103,80,164,0.08);
+    font-size: 2.6rem !important;
+    display: inline-block;
+}
+
+/* 卡片内容间距 */
+.feature-card h3, .scene-card h3 {
+    margin-top: 8px;
+    margin-bottom: 18px;
+    font-size: 1.28rem;
+    font-weight: 700;
+}
+
+/* 响应式优化：移动端更舒展 */
+@media (max-width: 600px) {
+    .container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
     .feature-card, .scene-card {
-        min-height: 220px;
-        padding: 28px 12px;
+        padding: 18px 6px !important;
+        min-height: 160px !important;
     }
-    .hero-content h1 {
-        font-size: 2rem;
+    .btn, .experience-btn {
+        padding: 12px 10vw !important;
+        font-size: 1rem !important;
     }
-    .section-title {
-        font-size: 1.5rem;
+    .hero-content h1, .section-title {
+        font-size: 1.1rem !important;
     }
+    .hero-img img, .about-img img {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* 导航栏悬浮效果 */
+.navbar {
+    backdrop-filter: blur(8px);
+    background: rgba(245,243,255,0.95) !important;
+    border-bottom: 1.5px solid var(--border-color) !important;
+    box-shadow: 0 2px 12px rgba(103,80,164,0.06) !important;
+}
+
+/* Footer更现代 */
+.footer {
+    background: linear-gradient(90deg, #4f378b 60%, #6750a4 100%) !important;
+    color: #fff !important;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    box-shadow: 0 -4px 24px rgba(103,80,164,0.10);
+}
+.footer .logo {
+    color: #fff !important;
+}
+.footer-link, .social-icons a {
+    color: #d1c4e9 !important;
+}
+.footer-link:hover, .social-icons a:hover {
+    color: #fff !important;
 }
