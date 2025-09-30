@@ -160,6 +160,14 @@ body {
     padding: 15px 20px;
 }
 
+/* 导航栏内容垂直居中 */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    height: 64px; /* 可根据实际高度调整 */
+    min-height: 64px;
+}
+
 .logo {
     font-size: 1.2rem;
     font-weight: 700;
@@ -758,7 +766,14 @@ section {
     background: transparent;
 }
 
-/* LOGO 更突出 */
+/* 导航栏内容垂直居中 */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    height: 64px; /* 可根据实际高度调整 */
+    min-height: 64px;
+}
+
 .logo {
     font-size: 1.3rem !important;
     font-weight: 800 !important;
