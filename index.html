@@ -5,191 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学科模拟器 - 沉浸式学科探索新体验</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 图标库（可选，用于特色/功能图标） -->
+    <!-- 图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- 1. 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <i class="fas fa-flask"></i> <!-- 占位图标：可替换为作品LOGO -->
-                学科模拟器
-            </a>
-            <!-- 汉堡菜单（移动端） -->
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+    <header>
+        <nav class="navbar" aria-label="主导航">
+            <div class="container">
+                <a href="#" class="logo" aria-label="学科模拟器首页">
+                    <i class="fas fa-flask" aria-hidden="true"></i>
+                    <span>学科模拟器</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="展开菜单" aria-controls="navLinks" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#features">核心特色</a></li>
+                    <li><a href="#functions">功能展示</a></li>
+                    <li><a href="#scenes">适用场景</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#experience" class="btn">立即体验</a></li>
+                </ul>
             </div>
-            <!-- 导航项 -->
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#features">核心特色</a></li>
-                <li><a href="#functions">功能展示</a></li>
-                <li><a href="#scenes">适用场景</a></li>
-                <li><a href="#about">关于我们</a></li>
-                <li><a href="#experience" class="btn">立即体验</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- 2. 首屏 Hero 区（核心吸引） -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>学科模拟器<br>让知识“活”起来的互动探索工具</h1>
-                <p class="hero-desc">
-                    <!-- 预留核心价值描述 -->
-                    <span class="placeholder">用沉浸式场景解码学科本质，以互动操作替代死记硬背——覆盖数学、物理、化学、生物等核心学科，为学生打造“可触摸的知识宇宙”。</span>
-                </p>
-                <a href="#experience" class="btn hero-btn">免费试玩</a>
-            </div>
-            <div class="hero-img">
-                <!-- 预留产品主视觉图 -->
-                <img src="https://via.placeholder.com/600x400?text=学科模拟器+主视觉" alt="学科模拟器产品界面">
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. 核心特色区（差异化卖点） -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">为什么选择学科模拟器？</h2>
-            <div class="features-grid">
-                <!-- 特色卡片 1：预留内容 -->
-                <div class="feature-card">
-                    <i class="fas fa-vr-cardboard feature-icon"></i>
-                    <h3>沉浸式场景还原</h3>
-                    <p class="placeholder">将抽象学科知识转化为可交互的真实场景——比如在“分子运动模拟”中观察温度对扩散的影响，或在“古战场沙盘”中推演历史事件的因果链。</p>
-                </div>
-                <!-- 特色卡片 2：预留内容 -->
-                <div class="feature-card">
-                    <i class="fas fa-mouse-pointer feature-icon"></i>
-                    <h3>探究式互动学习</h3>
-                    <p class="placeholder">拒绝填鸭式教学！用户可通过拖拽、实验、决策等方式主动探索知识——比如调整电路参数观察电流变化，或在“生态系统模拟”中修改物种数量看平衡如何重建。</p>
-                </div>
-                <!-- 特色卡片 3：预留内容 -->
-                <div class="feature-card">
-                    <i class="fas fa-project-diagram feature-icon"></i>
-                    <h3>多维度知识联动</h3>
-                    <p class="placeholder">打破学科壁垒！比如在“城市规划模拟”中融合地理（地形）、数学（统计）、社会（人口）知识，帮用户建立系统思维。</p>
-                </div>
-                <!-- 特色卡片 4：预留内容 -->
-                <div class="feature-card">
-                    <i class="fas fa-chart-line feature-icon"></i>
-                    <h3>个性化学习路径</h3>
-                    <p class="placeholder">根据用户操作数据生成专属能力图谱，推荐针对性学习任务——比如发现“浮力”模块薄弱时，自动推送“阿基米德原理”互动实验。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. 功能展示区（具体能力） -->
-    <section class="functions" id="functions">
-        <div class="container">
-            <h2 class="section-title">核心功能一览</h2>
-            <div class="functions-list">
-                <!-- 功能项 1：预留内容 -->
-                <div class="function-item">
-                    <div class="function-img">
-                        <img src="https://via.placeholder.com/400x250?text=场景模拟功能" alt="学科场景模拟">
-                    </div>
-                    <div class="function-text">
-                        <h3>学科场景深度模拟</h3>
-                        <p class="placeholder">覆盖K12全学段核心学科，包含<span class="highlight">50+真实场景</span>（如物理“电磁感应”、化学“酸碱中和”、生物“DNA复制”），每个场景支持参数调节与结果预测。</p>
-                    </div>
-                </div>
-                <!-- 功能项 2：预留内容 -->
-                <div class="function-item reverse">
-                    <div class="function-img">
-                        <img src="https://via.placeholder.com/400x250?text=实验互动功能" alt="互动实验操作">
-                    </div>
-                    <div class="function-text">
-                        <h3>安全无界的实验操作</h3>
-                        <p class="placeholder">还原实验室真实操作流程，支持<span class="highlight">30+经典实验</span>（如“配制一定浓度溶液”“验证牛顿第二定律”），无需器材即可反复练习，规避安全隐患。</p>
-                    </div>
-                </div>
-                <!-- 功能项 3：预留内容 -->
-                <div class="function-item">
-                    <div class="function-img">
-                        <img src="https://via.placeholder.com/400x250?text=知识图谱功能" alt="知识图谱可视化">
-                    </div>
-                    <div class="function-text">
-                        <h3>可视化知识图谱</h3>
-                        <p class="placeholder">自动梳理知识点关联，以<span class="highlight">节点链路图</span>呈现“概念-原理-应用”的逻辑链，帮用户构建清晰的知识框架。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. 适用场景区（目标用户） -->
-    <section class="scenes" id="scenes">
-        <div class="container">
-            <h2 class="section-title">谁需要学科模拟器？</h2>
-            <div class="scenes-grid">
-                <!-- 场景 1：学生 -->
-                <div class="scene-card">
-                    <i class="fas fa-user-graduate scene-icon"></i>
-                    <h3>学生</h3>
-                    <p class="placeholder">课堂延伸：用模拟补全实验课缺失；自主探究：主动拆解复杂概念；兴趣激发：在“玩”中发现学科魅力。</p>
-                </div>
-                <!-- 场景 2：老师 -->
-                <div class="scene-card">
-                    <i class="fas fa-chalkboard-teacher scene-icon"></i>
-                    <h3>教师</h3>
-                    <p class="placeholder">教学辅助：用模拟替代部分演示实验；互动课堂：引导学生共同操作探究；效果评估：通过数据追踪学生理解程度。</p>
-                </div>
-                <!-- 场景 3：家长 -->
-                <div class="scene-card">
-                    <i class="fas fa-user-friends scene-icon"></i>
-                    <h3>家长</h3>
-                    <p class="placeholder">课后巩固：替代刷题，让孩子主动学；兴趣培养：避免枯燥辅导，用互动激发好奇心；能力查看：通过报告了解孩子知识短板。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. 关于我们/创作者说 -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">我们的初心</h2>
-                    <p class="placeholder">
-                        学科模拟器的诞生，源于对“传统教育痛点”的观察——很多学生对学科的兴趣，止步于课本上的静态文字和公式。<br><br>
-                        我们相信：<span class="highlight">知识不该是“被灌输”的，而应是“被探索”的</span>。因此，我们联合一线教师与游戏设计师，将学科逻辑转化为可互动的数字场景，让孩子在“试错-观察-总结”中真正理解知识本质。<br><br>
-                        未来，我们会持续扩展学科覆盖与场景深度，让每个孩子都能找到属于自己的“知识探索乐趣”。
+    <main>
+        <!-- 2. 首屏 Hero 区 -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 id="hero-title">学科模拟器<br>让知识“活”起来的互动探索工具</h1>
+                    <p class="hero-desc">
+                        <span class="placeholder">
+                            用沉浸式场景解码学科本质，以互动操作替代死记硬背——覆盖数学、物理、化学、生物等核心学科，为学生打造“可触摸的知识宇宙”。
+                        </span>
                     </p>
+                    <a href="#experience" class="btn hero-btn">免费试玩</a>
                 </div>
-                <div class="about-img">
-                    <!-- 预留团队/创作理念图 -->
-                    <img src="https://via.placeholder.com/500x300?text=创作团队/理念" alt="关于学科模拟器">
+                <div class="hero-img">
+                    <img src="https://via.placeholder.com/600x400?text=学科模拟器+主视觉" alt="学科模拟器产品界面">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 7. 体验引导区 -->
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="experience-content">
-                <h2>立即开启学科探索之旅</h2>
-                <p class="placeholder">无需下载，点击体验基础版模拟场景→</p>
-                <a href="#" class="btn experience-btn">开始体验</a>
-                <!-- 预留表单（可选：收集用户信息） -->
-                <!-- <form class="experience-form">
-                    <input type="email" placeholder="请输入您的邮箱，获取更新通知" required>
-                    <button type="submit" class="btn">订阅更新</button>
-                </form> -->
+        <!-- 3. 核心特色区 -->
+        <section class="features" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 class="section-title" id="features-title">为什么选择学科模拟器？</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <i class="fas fa-vr-cardboard feature-icon" aria-hidden="true"></i>
+                        <h3>沉浸式场景还原</h3>
+                        <p class="placeholder">将抽象学科知识转化为可交互的真实场景——比如在“分子运动模拟”中观察温度对扩散的影响，或在“古战场沙盘”中推演历史事件的因果链。</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-mouse-pointer feature-icon" aria-hidden="true"></i>
+                        <h3>探究式互动学习</h3>
+                        <p class="placeholder">拒绝填鸭式教学！用户可通过拖拽、实验、决策等方式主动探索知识——比如调整电路参数观察电流变化，或在“生态系统模拟”中修改物种数量看平衡如何重建。</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-project-diagram feature-icon" aria-hidden="true"></i>
+                        <h3>多维度知识联动</h3>
+                        <p class="placeholder">打破学科壁垒！比如在“城市规划模拟”中融合地理（地形）、数学（统计）、社会（人口）知识，帮用户建立系统思维。</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-chart-line feature-icon" aria-hidden="true"></i>
+                        <h3>个性化学习路径</h3>
+                        <p class="placeholder">根据用户操作数据生成专属能力图谱，推荐针对性学习任务——比如发现“浮力”模块薄弱时，自动推送“阿基米德原理”互动实验。</p>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- 4. 功能展示区 -->
+        <section class="functions" id="functions" aria-labelledby="functions-title">
+            <div class="container">
+                <h2 class="section-title" id="functions-title">核心功能一览</h2>
+                <div class="functions-list">
+                    <article class="function-item">
+                        <div class="function-img">
+                            <img src="https://via.placeholder.com/400x250?text=场景模拟功能" alt="学科场景模拟">
+                        </div>
+                        <div class="function-text">
+                            <h3>学科场景深度模拟</h3>
+                            <p class="placeholder">覆盖K12全学段核心学科，包含<span class="highlight">50+真实场景</span>（如物理“电磁感应”、化学“酸碱中和”、生物“DNA复制”），每个场景支持参数调节与结果预测。</p>
+                        </div>
+                    </article>
+                    <article class="function-item reverse">
+                        <div class="function-img">
+                            <img src="https://via.placeholder.com/400x250?text=实验互动功能" alt="互动实验操作">
+                        </div>
+                        <div class="function-text">
+                            <h3>安全无界的实验操作</h3>
+                            <p class="placeholder">还原实验室真实操作流程，支持<span class="highlight">30+经典实验</span>（如“配制一定浓度溶液”“验证牛顿第二定律”），无需器材即可反复练习，规避安全隐患。</p>
+                        </div>
+                    </article>
+                    <article class="function-item">
+                        <div class="function-img">
+                            <img src="https://via.placeholder.com/400x250?text=知识图谱功能" alt="知识图谱可视化">
+                        </div>
+                        <div class="function-text">
+                            <h3>可视化知识图谱</h3>
+                            <p class="placeholder">自动梳理知识点关联，以<span class="highlight">节点链路图</span>呈现“概念-原理-应用”的逻辑链，帮用户构建清晰的知识框架。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 适用场景区 -->
+        <section class="scenes" id="scenes" aria-labelledby="scenes-title">
+            <div class="container">
+                <h2 class="section-title" id="scenes-title">谁需要学科模拟器？</h2>
+                <div class="scenes-grid">
+                    <article class="scene-card">
+                        <i class="fas fa-user-graduate scene-icon" aria-hidden="true"></i>
+                        <h3>学生</h3>
+                        <p class="placeholder">课堂延伸：用模拟补全实验课缺失；自主探究：主动拆解复杂概念；兴趣激发：在“玩”中发现学科魅力。</p>
+                    </article>
+                    <article class="scene-card">
+                        <i class="fas fa-chalkboard-teacher scene-icon" aria-hidden="true"></i>
+                        <h3>教师</h3>
+                        <p class="placeholder">教学辅助：用模拟替代部分演示实验；互动课堂：引导学生共同操作探究；效果评估：通过数据追踪学生理解程度。</p>
+                    </article>
+                    <article class="scene-card">
+                        <i class="fas fa-user-friends scene-icon" aria-hidden="true"></i>
+                        <h3>家长</h3>
+                        <p class="placeholder">课后巩固：替代刷题，让孩子主动学；兴趣培养：避免枯燥辅导，用互动激发好奇心；能力查看：通过报告了解孩子知识短板。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 关于我们 -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title" id="about-title">我们的初心</h2>
+                        <p class="placeholder">
+                            学科模拟器的诞生，源于对“传统教育痛点”的观察——很多学生对学科的兴趣，止步于课本上的静态文字和公式。<br><br>
+                            我们相信：<span class="highlight">知识不该是“被灌输”的，而应是“被探索”的</span>。因此，我们联合一线教师与游戏设计师，将学科逻辑转化为可互动的数字场景，让孩子在“试错-观察-总结”中真正理解知识本质。<br><br>
+                            未来，我们会持续扩展学科覆盖与场景深度，让每个孩子都能找到属于自己的“知识探索乐趣”。
+                        </p>
+                    </div>
+                    <div class="about-img">
+                        <img src="https://via.placeholder.com/500x300?text=创作团队/理念" alt="关于学科模拟器">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. 体验引导区 -->
+        <section class="experience" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <div class="experience-content">
+                    <h2 id="experience-title">立即开启学科探索之旅</h2>
+                    <p class="placeholder">无需下载，点击体验基础版模拟场景→</p>
+                    <a href="#" class="btn experience-btn">开始体验</a>
+                    <!-- 预留表单（可选） -->
+                    <!--
+                    <form class="experience-form">
+                        <label for="email" class="visually-hidden">邮箱</label>
+                        <input type="email" id="email" placeholder="请输入您的邮箱，获取更新通知" required>
+                        <button type="submit" class="btn">订阅更新</button>
+                    </form>
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- 8. Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="页脚">
         <div class="container">
             <div class="footer-left">
-                <a href="#" class="logo">
-                    <i class="fas fa-flask"></i> 学科模拟器
+                <a href="#" class="logo" aria-label="学科模拟器首页">
+                    <i class="fas fa-flask" aria-hidden="true"></i> 学科模拟器
                 </a>
                 <p class="placeholder">© 202X 学科模拟器团队 版权所有<br>青少年教育软件备案号：XXX</p>
             </div>
@@ -197,11 +191,10 @@
                 <a href="#" class="footer-link">隐私政策</a>
                 <a href="#" class="footer-link">用户协议</a>
                 <a href="#" class="footer-link">联系我们</a>
-                <!-- 社交媒体图标（可选） -->
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-weixin"></i></a>
-                    <a href="#"><i class="fab fa-qq"></i></a>
-                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
+                    <a href="#" aria-label="QQ"><i class="fab fa-qq"></i></a>
+                    <a href="#" aria-label="微博"><i class="fab fa-weibo"></i></a>
                 </div>
             </div>
         </div>
