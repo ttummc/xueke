@@ -14,8 +14,6 @@
     --font-family: '微软雅黑', 'Segoe UI', Roboto, sans-serif; /* 字体栈 */
 }
 
-/* ...existing code... */
-
 /* Material You 主题色彩 */
 :root {
     --primary-color: #6750a4; /* Material You 主色 */
@@ -96,8 +94,6 @@ body {
     color: var(--text-color);
     font-family: var(--font-family);
 }
-
-/* ...existing code... */
 
 body {
     font-family: var(--font-family);
@@ -734,4 +730,111 @@ section {
 }
 .footer-link:hover, .social-icons a:hover {
     color: #fff !important;
+}
+
+/* --- Material You 导航栏优化 --- */
+.navbar {
+    background: rgba(245,243,255,0.95) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1.5px solid var(--border-color) !important;
+    box-shadow: 0 4px 24px rgba(103,80,164,0.08) !important;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 96vw;
+    max-width: 1200px;
+    position: fixed;
+    z-index: 1000;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+/* 导航内容居中且更紧凑 */
+.navbar .container {
+    padding: 10px 24px !important;
+    border-radius: 0 0 24px 24px;
+    background: transparent;
+}
+
+/* LOGO 更突出 */
+.logo {
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    color: var(--primary-color) !important;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.logo i {
+    font-size: 1.4em;
+    margin-right: 6px;
+}
+
+/* 导航链接更圆润，悬停有色块 */
+.nav-links {
+    gap: 18px !important;
+}
+.nav-links a {
+    padding: 8px 18px;
+    border-radius: 18px;
+    transition: background 0.2s, color 0.2s;
+    color: var(--text-color) !important;
+    font-weight: 600;
+}
+.nav-links a:hover {
+    background: var(--surface-variant);
+    color: var(--primary-color) !important;
+}
+
+/* 导航栏按钮更突出 */
+.nav-links .btn {
+    background: linear-gradient(90deg, var(--primary-color) 60%, #7f67be 100%) !important;
+    color: var(--on-primary) !important;
+    border-radius: 22px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(103,80,164,0.13);
+    padding: 10px 24px !important;
+    font-size: 1rem !important;
+    margin-left: 8px;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.nav-links .btn:hover {
+    background: linear-gradient(90deg, #7f67be 60%, var(--primary-color) 100%) !important;
+    box-shadow: 0 6px 24px rgba(103,80,164,0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* 汉堡菜单优化 */
+.hamburger {
+    border-radius: 50%;
+    background: var(--surface-variant);
+    padding: 8px 10px;
+    box-shadow: 0 2px 8px rgba(103,80,164,0.10);
+    font-size: 1.3rem;
+    color: var(--primary-color) !important;
+    transition: background 0.2s;
+}
+.hamburger:hover {
+    background: var(--primary-color);
+    color: var(--on-primary) !important;
+}
+
+/* 响应式优化 */
+@media (max-width: 900px) {
+    .navbar {
+        width: 100vw;
+        max-width: 100vw;
+        border-radius: 0 0 18px 18px;
+        left: 0;
+        right: 0;
+    }
+    .navbar .container {
+        padding: 10px 8px !important;
+    }
+    .nav-links {
+        gap: 8px !important;
+    }
 }
