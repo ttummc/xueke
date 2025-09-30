@@ -862,5 +862,9 @@ section {
 /* 增大导航栏毛玻璃透明效果 */
 .navbar {
     background: rgba(245,243,255,0.65) !important; /* 透明度由0.85降为0.65 */
-    backdrop-filter: blur(28px) saturate(180%);
+}
+
+/* 减弱导航栏毛玻璃模糊效果 */
+.navbar {
+    backdrop-filter: blur(12px) saturate(150%);
 }
