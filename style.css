@@ -822,6 +822,26 @@ section {
     color: var(--on-primary) !important;
 }
 
+/* 缩小导航栏圆角，增强毛玻璃效果 */
+.navbar {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    backdrop-filter: blur(24px) saturate(160%);
+    background: rgba(245,243,255,0.85) !important;
+    box-shadow: 0 4px 24px rgba(103,80,164,0.10) !important;
+    /* 其余属性保持不变 */
+}
+
+/* 导航内容圆角同步缩小 */
+.navbar .container {
+    border-radius: 0 0 12px 12px;
+}
+
+/* 汉堡菜单圆角同步缩小 */
+.hamburger {
+    border-radius: 12px;
+}
+
 /* 响应式优化 */
 @media (max-width: 900px) {
     .navbar {
