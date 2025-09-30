@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学科模拟器 - 沉浸式学科探索新体验</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- 1. 导航栏 -->
@@ -14,11 +12,20 @@
         <nav class="navbar" aria-label="主导航">
             <div class="container">
                 <a href="#" class="logo" aria-label="学科模拟器首页">
-                    <i class="fas fa-flask" aria-hidden="true"></i>
+                    <!-- 实验瓶SVG -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#6750a4"/>
+                        <circle cx="12" cy="17" r="1.5" fill="#7f67be"/>
+                    </svg>
                     <span>学科模拟器</span>
                 </a>
                 <button class="hamburger" id="hamburger" aria-label="展开菜单" aria-controls="navLinks" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
+                    <!-- 汉堡SVG -->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <rect y="4" width="24" height="2" rx="1" fill="#6750a4"/>
+                        <rect y="11" width="24" height="2" rx="1" fill="#6750a4"/>
+                        <rect y="18" width="24" height="2" rx="1" fill="#6750a4"/>
+                    </svg>
                 </button>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#features">核心特色</a></li>
@@ -56,22 +63,50 @@
                 <h2 class="section-title" id="features-title">为什么选择学科模拟器？</h2>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <i class="fas fa-vr-cardboard feature-icon" aria-hidden="true"></i>
+                        <!-- VR眼镜SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <rect x="3" y="12" width="30" height="12" rx="4" fill="#6750a4"/>
+                            <rect x="7" y="16" width="6" height="4" rx="2" fill="#fff"/>
+                            <rect x="23" y="16" width="6" height="4" rx="2" fill="#fff"/>
+                        </svg>
                         <h3>沉浸式场景还原</h3>
                         <p class="placeholder">将抽象学科知识转化为可交互的真实场景——比如在“分子运动模拟”中观察温度对扩散的影响，或在“古战场沙盘”中推演历史事件的因果链。</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-mouse-pointer feature-icon" aria-hidden="true"></i>
+                        <!-- 鼠标SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <rect x="14" y="4" width="8" height="20" rx="4" fill="#6750a4"/>
+                            <rect x="16" y="6" width="4" height="8" rx="2" fill="#fff"/>
+                            <rect x="14" y="24" width="8" height="8" rx="4" fill="#7f67be"/>
+                        </svg>
                         <h3>探究式互动学习</h3>
                         <p class="placeholder">拒绝填鸭式教学！用户可通过拖拽、实验、决策等方式主动探索知识——比如调整电路参数观察电流变化，或在“生态系统模拟”中修改物种数量看平衡如何重建。</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-project-diagram feature-icon" aria-hidden="true"></i>
+                        <!-- 网络结构SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <circle cx="18" cy="18" r="4" fill="#6750a4"/>
+                            <circle cx="6" cy="6" r="3" fill="#7f67be"/>
+                            <circle cx="30" cy="6" r="3" fill="#7f67be"/>
+                            <circle cx="6" cy="30" r="3" fill="#7f67be"/>
+                            <circle cx="30" cy="30" r="3" fill="#7f67be"/>
+                            <line x1="18" y1="18" x2="6" y2="6" stroke="#6750a4" stroke-width="2"/>
+                            <line x1="18" y1="18" x2="30" y2="6" stroke="#6750a4" stroke-width="2"/>
+                            <line x1="18" y1="18" x2="6" y2="30" stroke="#6750a4" stroke-width="2"/>
+                            <line x1="18" y1="18" x2="30" y2="30" stroke="#6750a4" stroke-width="2"/>
+                        </svg>
                         <h3>多维度知识联动</h3>
                         <p class="placeholder">打破学科壁垒！比如在“城市规划模拟”中融合地理（地形）、数学（统计）、社会（人口）知识，帮用户建立系统思维。</p>
                     </article>
                     <article class="feature-card">
-                        <i class="fas fa-chart-line feature-icon" aria-hidden="true"></i>
+                        <!-- 折线图SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <polyline points="6,30 14,18 22,24 30,10" fill="none" stroke="#6750a4" stroke-width="3"/>
+                            <circle cx="6" cy="30" r="2" fill="#7f67be"/>
+                            <circle cx="14" cy="18" r="2" fill="#7f67be"/>
+                            <circle cx="22" cy="24" r="2" fill="#7f67be"/>
+                            <circle cx="30" cy="10" r="2" fill="#7f67be"/>
+                        </svg>
                         <h3>个性化学习路径</h3>
                         <p class="placeholder">根据用户操作数据生成专属能力图谱，推荐针对性学习任务——比如发现“浮力”模块薄弱时，自动推送“阿基米德原理”互动实验。</p>
                     </article>
@@ -121,17 +156,32 @@
                 <h2 class="section-title" id="scenes-title">谁需要学科模拟器？</h2>
                 <div class="scenes-grid">
                     <article class="scene-card">
-                        <i class="fas fa-user-graduate scene-icon" aria-hidden="true"></i>
+                        <!-- 毕业生SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <ellipse cx="18" cy="12" rx="8" ry="4" fill="#6750a4"/>
+                            <rect x="10" y="16" width="16" height="10" rx="5" fill="#7f67be"/>
+                            <rect x="15" y="26" width="6" height="4" rx="2" fill="#6750a4"/>
+                        </svg>
                         <h3>学生</h3>
                         <p class="placeholder">课堂延伸：用模拟补全实验课缺失；自主探究：主动拆解复杂概念；兴趣激发：在“玩”中发现学科魅力。</p>
                     </article>
                     <article class="scene-card">
-                        <i class="fas fa-chalkboard-teacher scene-icon" aria-hidden="true"></i>
+                        <!-- 教师SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <rect x="8" y="8" width="20" height="8" rx="4" fill="#6750a4"/>
+                            <rect x="12" y="18" width="12" height="10" rx="6" fill="#7f67be"/>
+                            <rect x="16" y="28" width="4" height="4" rx="2" fill="#6750a4"/>
+                        </svg>
                         <h3>教师</h3>
                         <p class="placeholder">教学辅助：用模拟替代部分演示实验；互动课堂：引导学生共同操作探究；效果评估：通过数据追踪学生理解程度。</p>
                     </article>
                     <article class="scene-card">
-                        <i class="fas fa-user-friends scene-icon" aria-hidden="true"></i>
+                        <!-- 家长SVG -->
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="14" r="4" fill="#6750a4"/>
+                            <circle cx="24" cy="14" r="4" fill="#7f67be"/>
+                            <rect x="8" y="20" width="20" height="8" rx="4" fill="#6750a4"/>
+                        </svg>
                         <h3>家长</h3>
                         <p class="placeholder">课后巩固：替代刷题，让孩子主动学；兴趣培养：避免枯燥辅导，用互动激发好奇心；能力查看：通过报告了解孩子知识短板。</p>
                     </article>
@@ -165,14 +215,6 @@
                     <h2 id="experience-title">立即开启学科探索之旅</h2>
                     <p class="placeholder">无需下载，点击体验基础版模拟场景→</p>
                     <a href="#" class="btn experience-btn">开始体验</a>
-                    <!-- 预留表单（可选） -->
-                    <!--
-                    <form class="experience-form">
-                        <label for="email" class="visually-hidden">邮箱</label>
-                        <input type="email" id="email" placeholder="请输入您的邮箱，获取更新通知" required>
-                        <button type="submit" class="btn">订阅更新</button>
-                    </form>
-                    -->
                 </div>
             </div>
         </section>
@@ -183,7 +225,12 @@
         <div class="container">
             <div class="footer-left">
                 <a href="#" class="logo" aria-label="学科模拟器首页">
-                    <i class="fas fa-flask" aria-hidden="true"></i> 学科模拟器
+                    <!-- 实验瓶SVG -->
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#fff"/>
+                        <circle cx="12" cy="17" r="1.5" fill="#d1c4e9"/>
+                    </svg>
+                    学科模拟器
                 </a>
                 <p class="placeholder">© 202X 学科模拟器团队 版权所有<br>青少年教育软件备案号：XXX</p>
             </div>
@@ -192,9 +239,30 @@
                 <a href="#" class="footer-link">用户协议</a>
                 <a href="#" class="footer-link">联系我们</a>
                 <div class="social-icons">
-                    <a href="#" aria-label="微信"><i class="fab fa-weixin"></i></a>
-                    <a href="#" aria-label="QQ"><i class="fab fa-qq"></i></a>
-                    <a href="#" aria-label="微博"><i class="fab fa-weibo"></i></a>
+                    <!-- 微信SVG -->
+                    <a href="#" aria-label="微信">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <ellipse cx="12" cy="12" rx="10" ry="10" fill="#7f67be"/>
+                            <ellipse cx="9" cy="12" rx="1.5" ry="1.5" fill="#fff"/>
+                            <ellipse cx="15" cy="12" rx="1.5" ry="1.5" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <!-- QQ SVG -->
+                    <a href="#" aria-label="QQ">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <ellipse cx="12" cy="12" rx="10" ry="10" fill="#7f67be"/>
+                            <ellipse cx="12" cy="10" rx="4" ry="4" fill="#fff"/>
+                            <rect x="8" y="16" width="8" height="2" rx="1" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <!-- 微博SVG -->
+                    <a href="#" aria-label="微博">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                            <ellipse cx="12" cy="12" rx="10" ry="10" fill="#7f67be"/>
+                            <ellipse cx="12" cy="12" rx="4" ry="2" fill="#fff"/>
+                            <ellipse cx="12" cy="16" rx="2" ry="1" fill="#fff"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
