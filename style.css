@@ -260,57 +260,93 @@ section { padding-top: 88px; padding-bottom: 88px; }
 
 /* ===== 暗色模式 ===== */
 @media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #b7aaff;
+        --on-primary: #232136;
+        --secondary-color: #a3a1e4;
+        --on-secondary: #232136;
+        --surface-color: #232136;
+        --surface-variant: #2a273f;
+        --outline: #393552;
+        --text-color: #e0def4;
+        --border-color: #393552;
+    }
     body {
-        background: #232136 !important;
-        color: #e0def4 !important;
+        background: var(--surface-color) !important;
+        color: var(--text-color) !important;
     }
     .navbar {
-        background: rgba(35,33,54,0.85) !important;
+        background: rgba(35,33,54,0.92) !important;
         box-shadow: 0 4px 24px rgba(103,80,164,0.25) !important;
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
+        border-bottom: 1.5px solid var(--border-color) !important;
     }
-    .navbar .container { background: transparent !important; }
-    .logo, .logo span { color: #c9bfff !important; }
-    .nav-links a { color: #e0def4 !important; }
-    .nav-links a:hover, .nav-links .btn:hover {
-        background: #393552 !important;
-        color: #a3a1e4 !important;
+    .navbar .container {
+        background: transparent !important;
+    }
+    .logo, .logo span {
+        color: var(--primary-color) !important;
+    }
+    .nav-links a {
+        color: var(--text-color) !important;
+        background: transparent !important;
+    }
+    .nav-links a:hover,
+    .nav-links .btn:hover {
+        background: var(--surface-variant) !important;
+        color: var(--primary-color) !important;
     }
     .btn, .experience-btn, .nav-links .btn {
         background: linear-gradient(90deg, #7f67be 60%, #6750a4 100%) !important;
         color: #fff !important;
         border-radius: 10px !important;
+        border: none !important;
     }
     .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
         background: linear-gradient(90deg, #6750a4 60%, #7f67be 100%) !important;
     }
     .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
-        background: #2a273f !important;
-        border-color: #393552 !important;
+        background: var(--surface-variant) !important;
+        border-color: var(--border-color) !important;
         box-shadow: 0 4px 24px rgba(103,80,164,0.18) !important;
     }
     .feature-card h3, .scene-card h3, .function-text h3, .section-title, .hero-content h1 {
-        color: #c9bfff !important;
+        color: var(--primary-color) !important;
     }
     .feature-icon, .scene-icon {
-        color: #a3a1e4 !important;
-        background: #393552 !important;
+        color: var(--primary-color) !important;
+        background: var(--surface-color) !important;
     }
     .footer {
         background: linear-gradient(90deg, #393552 60%, #232136 100%) !important;
-        color: #e0def4 !important;
+        color: var(--text-color) !important;
     }
-    .footer .logo { color: #c9bfff !important; }
-    .footer-link, .social-icons a { color: #a3a1e4 !important; }
-    .footer-link:hover, .social-icons a:hover { color: #fff !important; }
-    .highlight { color: #ffe066 !important; }
+    .footer .logo {
+        color: var(--primary-color) !important;
+    }
+    .footer-link, .social-icons a {
+        color: var(--secondary-color) !important;
+    }
+    .footer-link:hover, .social-icons a:hover {
+        color: #fff !important;
+    }
+    .highlight {
+        color: #ffe066 !important;
+    }
     input, textarea {
-        background: #232136 !important;
-        color: #e0def4 !important;
-        border-color: #393552 !important;
+        background: var(--surface-color) !important;
+        color: var(--text-color) !important;
+        border-color: var(--border-color) !important;
     }
-    .about { background: #232136 !important; }
-    .features, .functions { background: #232136 !important; }
-    .scenes, .experience { background: #2a273f !important; }
+    .about {
+        background: var(--surface-color) !important;
+    }
+    .features, .functions {
+        background: var(--surface-variant) !important;
+    }
+    .scenes, .experience {
+        background: var(--surface-color) !important;
+    }
+    .placeholder { color: #8a889d !important; }
 }
