@@ -933,10 +933,81 @@ body {
     color: #fff !important;
 }
 
-/* 响应式优化 */
-@media (max-width: 900px) {
+/* ====== 暗色模式支持 ====== */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #232136 !important;
+        color: #e0def4 !important;
+    }
+    .navbar {
+        background: rgba(35,33,54,0.85) !important;
+        box-shadow: 0 4px 24px rgba(103,80,164,0.25) !important;
+        border-bottom-left-radius: 8px !important;
+        border-bottom-right-radius: 8px !important;
+    }
     .navbar .container {
-        padding-left: 8px !important;
-        padding-right: 8px !important;
+        background: transparent !important;
+    }
+    .logo span,
+    .logo {
+        color: #c9bfff !important;
+    }
+    .nav-links a {
+        color: #e0def4 !important;
+    }
+    .nav-links a:hover,
+    .nav-links .btn:hover {
+        background: #393552 !important;
+        color: #a3a1e4 !important;
+    }
+    .btn, .experience-btn, .nav-links .btn {
+        background: linear-gradient(90deg, #7f67be 60%, #6750a4 100%) !important;
+        color: #fff !important;
+        border-radius: 10px !important;
+    }
+    .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
+        background: linear-gradient(90deg, #6750a4 60%, #7f67be 100%) !important;
+    }
+    .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
+        background: #2a273f !important;
+        border-color: #393552 !important;
+        box-shadow: 0 4px 24px rgba(103,80,164,0.18) !important;
+    }
+    .feature-card h3, .scene-card h3, .function-text h3, .section-title, .hero-content h1 {
+        color: #c9bfff !important;
+    }
+    .feature-icon, .scene-icon {
+        color: #a3a1e4 !important;
+        background: #393552 !important;
+    }
+    .footer {
+        background: linear-gradient(90deg, #393552 60%, #232136 100%) !important;
+        color: #e0def4 !important;
+    }
+    .footer .logo {
+        color: #c9bfff !important;
+    }
+    .footer-link, .social-icons a {
+        color: #a3a1e4 !important;
+    }
+    .footer-link:hover, .social-icons a:hover {
+        color: #fff !important;
+    }
+    .highlight {
+        color: #ffe066 !important;
+    }
+    input, textarea {
+        background: #232136 !important;
+        color: #e0def4 !important;
+        border-color: #393552 !important;
+    }
+    .about {
+        background: #232136 !important;
+    }
+    .features, .functions {
+        background: #232136 !important;
+    }
+    .scenes, .experience {
+        background: #2a273f !important;
     }
 }
