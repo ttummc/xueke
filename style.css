@@ -33,10 +33,16 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    display: block;
+}
+
+/* 导航栏专用容器高度 */
+.navbar .container {
     height: 64px;
     min-height: 64px;
+    align-items: center;
+    display: flex;
 }
 
 /* ===== 导航栏 ===== */
@@ -398,4 +404,14 @@ section { padding-top: 88px; padding-bottom: 88px; }
         background: var(--surface-color) !important;
     }
     .placeholder { color: #8a889d !important; }
+}
+
+main {
+    padding-top: 64px; /* 导航栏高度一致，确保内容不被遮挡 */
+}
+
+.features-grid, .functions-list, .scenes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
 }
