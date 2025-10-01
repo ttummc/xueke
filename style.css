@@ -415,3 +415,10 @@ main {
     flex-wrap: wrap;
     gap: 32px;
 }
+
+.about-content, .hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+}
