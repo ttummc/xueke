@@ -559,6 +559,13 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
     }
 }
 
+/* 暗色模式下降低首页背景亮度 */
+@media (prefers-color-scheme: dark) {
+    .hero {
+        background: linear-gradient(120deg, #232136 0%, #28243c 100%) !important;
+    }
+}
+
 main {
     padding-top: 64px; /* 导航栏高度一致，确保内容不被遮挡 */
 }
