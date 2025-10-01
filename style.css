@@ -212,7 +212,7 @@ body {
 /* ===== 卡片 ===== */
 .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
     border-radius: var(--card-radius);
-    box-shadow: 0 4px 32px rgba(103,80,164,0.10);
+    box-shadow: 0 4px 24px rgba(103,80,164,0.10);
     background: var(--surface-color);
     border: 1.5px solid var(--border-color);
     margin-bottom: var(--gap-md);
@@ -229,7 +229,7 @@ body {
     align-items: flex-start;
 }
 .feature-card:hover, .scene-card:hover, .function-item:hover {
-    box-shadow: 0 12px 48px rgba(103,80,164,0.18);
+    box-shadow: 0 12px 32px rgba(103,80,164,0.16);
     transform: translateY(-6px) scale(1.03);
 }
 
@@ -332,27 +332,7 @@ input, textarea { border: 1px solid var(--outline); border-radius: 12px; padding
         margin-left: 0;
         max-width: 100%;
     }
-}
-
-/* ===== 区块间距统一 ===== */
-section, .features-grid, .functions-list, .scenes-grid, .about-content {
-    margin-bottom: var(--gap-lg);
-}
-.feature-card, .scene-card, .function-item {
-    margin-bottom: var(--gap-md);
-}
-
-/* ===== 响应式优化 ===== */
-@media (max-width: 1200px) {
-    .container { max-width: 1000px; }
-}
-@media (max-width: 900px) {
-    .container { max-width: 800px; }
-    .navbar .container { padding-left: var(--gap-sm); padding-right: var(--gap-sm); }
-    .nav-links { gap: var(--gap-sm); }
-    .features-grid, .functions-list, .scenes-grid { gap: var(--gap-sm); }
-    .function-item, .feature-card, .scene-card { padding: 24px 12px; }
-    .hero-img img, .about-img img { margin-left: var(--gap-md); }
+    body { font-size: 16px; }
 }
 @media (max-width: 768px) {
     .container { max-width: 98vw; }
@@ -379,6 +359,7 @@ section, .features-grid, .functions-list, .scenes-grid, .about-content {
     .hero-img img, .about-img img { width: 100%; min-width: 0; margin-left: 0; }
     .footer .container { flex-direction: column; gap: var(--gap-sm); }
     .footer-link { margin-right: 0; margin-bottom: 12px; }
+    body { font-size: 15px; }
 }
 
 /* ===== 暗色模式优化 ===== */
@@ -430,4 +411,12 @@ section, .features-grid, .functions-list, .scenes-grid, .about-content {
 
 main {
     padding-top: 64px; /* 导航栏高度一致，确保内容不被遮挡 */
+}
+
+.logo svg,
+.feature-card svg,
+.scene-card svg {
+    width: 2em;
+    height: auto;
+    vertical-align: middle;
 }
