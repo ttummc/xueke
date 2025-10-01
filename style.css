@@ -569,3 +569,27 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
 main {
     padding-top: 64px; /* 导航栏高度一致，确保内容不被遮挡 */
 }
+
+/* 统一背景颜色：所有主要区块与 body 使用同一背景色变量 */
+body,
+.features,
+.about,
+.functions,
+.scenes,
+.experience,
+.hero,
+section {
+    background: var(--surface-color) !important;
+}
+@media (prefers-color-scheme: dark) {
+    body,
+    .features,
+    .about,
+    .functions,
+    .scenes,
+    .experience,
+    .hero,
+    section {
+        background: var(--surface-color) !important;
+    }
+}
