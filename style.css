@@ -456,14 +456,18 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
         --btn-bg: #b7aaff;
         --btn-hover-bg: #7f67be;
         --btn-text: #232136;
+        --shadow-dark: 0 4px 32px rgba(103,80,164,0.32);
+        --shadow-card: 0 2px 16px rgba(183,170,255,0.18);
+        --shadow-navbar: 0 4px 24px rgba(103,80,164,0.38);
+        --shadow-footer: 0 -4px 32px rgba(103,80,164,0.22);
     }
     body {
         background: var(--surface-color) !important;
         color: var(--text-color) !important;
     }
     .navbar {
-        background: rgba(35,33,54,0.96) !important;
-        box-shadow: 0 4px 24px rgba(103,80,164,0.30) !important;
+        background: rgba(35,33,54,0.98) !important;
+        box-shadow: var(--shadow-navbar) !important;
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
         border-bottom: 1.5px solid var(--border-color) !important;
@@ -473,6 +477,7 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
     }
     .logo, .logo span {
         color: var(--primary-color) !important;
+        text-shadow: 0 2px 8px rgba(183,170,255,0.18);
     }
     .nav-links a {
         color: var(--text-color) !important;
@@ -482,43 +487,49 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
     .nav-links .btn:hover {
         background: #393552 !important;
         color: var(--primary-color) !important;
+        box-shadow: 0 2px 12px rgba(183,170,255,0.18) !important;
     }
     .btn, .experience-btn, .nav-links .btn {
         background: var(--btn-bg) !important;
         color: var(--btn-text) !important;
         border-radius: var(--btn-radius) !important;
         border: none !important;
-        box-shadow: 0 2px 12px rgba(103,80,164,0.22) !important;
+        box-shadow: 0 2px 16px rgba(183,170,255,0.18) !important;
+        text-shadow: 0 1px 4px rgba(183,170,255,0.10);
     }
     .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
         background: var(--btn-hover-bg) !important;
         color: var(--btn-text) !important;
+        box-shadow: 0 6px 32px rgba(183,170,255,0.22) !important;
     }
     .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
         background: #28243c !important;
         border-color: #393552 !important;
-        box-shadow: 0 4px 32px rgba(103,80,164,0.22) !important;
+        box-shadow: var(--shadow-card) !important;
     }
     .feature-card h3, .scene-card h3, .function-text h3, .section-title, .hero-content h1 {
         color: #b7aaff !important;
+        text-shadow: 0 2px 8px rgba(183,170,255,0.18);
     }
     .feature-icon, .scene-icon {
         color: #b7aaff !important;
         background: #393552 !important;
-        box-shadow: 0 2px 12px rgba(103,80,164,0.18) !important;
+        box-shadow: 0 2px 12px rgba(183,170,255,0.18) !important;
     }
     .footer {
         background: linear-gradient(90deg, #393552 60%, #232136 100%) !important;
         color: #e0def4 !important;
         border-top-left-radius: 24px;
         border-top-right-radius: 24px;
-        box-shadow: 0 -4px 32px rgba(103,80,164,0.18);
+        box-shadow: var(--shadow-footer);
     }
     .footer .logo {
         color: #b7aaff !important;
+        text-shadow: 0 2px 8px rgba(183,170,255,0.18);
     }
     .footer-link, .social-icons a {
         color: #a3a1e4 !important;
+        text-shadow: 0 1px 4px rgba(183,170,255,0.10);
     }
     .footer-link:hover, .social-icons a:hover {
         color: #fff !important;
@@ -530,6 +541,7 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
         background: #232136 !important;
         color: #e0def4 !important;
         border-color: #393552 !important;
+        box-shadow: 0 2px 8px rgba(183,170,255,0.10);
     }
     .about {
         background: #232136 !important;
@@ -543,6 +555,7 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
     .placeholder { color: #8a889d !important; }
     .section-title::after {
         background: #b7aaff !important;
+        box-shadow: 0 2px 8px rgba(183,170,255,0.18);
     }
 }
 
