@@ -314,6 +314,7 @@ section { padding-top: 88px; padding-bottom: 88px; }
 }
 
 /* ===== 暗色模式 ===== */
+/* 优化暗色模式：提升对比度、卡片和按钮更突出、细节更柔和 */
 @media (prefers-color-scheme: dark) {
     :root {
         --primary-color: #b7aaff;
@@ -331,8 +332,8 @@ section { padding-top: 88px; padding-bottom: 88px; }
         color: var(--text-color) !important;
     }
     .navbar {
-        background: rgba(35,33,54,0.92) !important;
-        box-shadow: 0 4px 24px rgba(103,80,164,0.25) !important;
+        background: rgba(35,33,54,0.96) !important;
+        box-shadow: 0 4px 24px rgba(103,80,164,0.30) !important;
         border-bottom-left-radius: 8px !important;
         border-bottom-right-radius: 8px !important;
         border-bottom: 1.5px solid var(--border-color) !important;
@@ -349,39 +350,45 @@ section { padding-top: 88px; padding-bottom: 88px; }
     }
     .nav-links a:hover,
     .nav-links .btn:hover {
-        background: var(--surface-variant) !important;
+        background: #393552 !important;
         color: var(--primary-color) !important;
     }
     .btn, .experience-btn, .nav-links .btn {
-        background: linear-gradient(90deg, #7f67be 60%, #6750a4 100%) !important;
-        color: #fff !important;
+        background: linear-gradient(90deg, #7f67be 60%, #b7aaff 100%) !important;
+        color: #232136 !important;
         border-radius: 10px !important;
         border: none !important;
+        box-shadow: 0 2px 12px rgba(103,80,164,0.22) !important;
     }
     .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
-        background: linear-gradient(90deg, #6750a4 60%, #7f67be 100%) !important;
+        background: linear-gradient(90deg, #b7aaff 60%, #7f67be 100%) !important;
+        color: #232136 !important;
     }
     .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
-        background: var(--surface-variant) !important;
-        border-color: var(--border-color) !important;
-        box-shadow: 0 4px 24px rgba(103,80,164,0.18) !important;
+        background: #28243c !important;
+        border-color: #393552 !important;
+        box-shadow: 0 4px 32px rgba(103,80,164,0.22) !important;
     }
     .feature-card h3, .scene-card h3, .function-text h3, .section-title, .hero-content h1 {
-        color: var(--primary-color) !important;
+        color: #b7aaff !important;
     }
     .feature-icon, .scene-icon {
-        color: var(--primary-color) !important;
-        background: var(--surface-color) !important;
+        color: #b7aaff !important;
+        background: #393552 !important;
+        box-shadow: 0 2px 12px rgba(103,80,164,0.18) !important;
     }
     .footer {
         background: linear-gradient(90deg, #393552 60%, #232136 100%) !important;
-        color: var(--text-color) !important;
+        color: #e0def4 !important;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        box-shadow: 0 -4px 32px rgba(103,80,164,0.18);
     }
     .footer .logo {
-        color: var(--primary-color) !important;
+        color: #b7aaff !important;
     }
     .footer-link, .social-icons a {
-        color: var(--secondary-color) !important;
+        color: #a3a1e4 !important;
     }
     .footer-link:hover, .social-icons a:hover {
         color: #fff !important;
@@ -390,20 +397,23 @@ section { padding-top: 88px; padding-bottom: 88px; }
         color: #ffe066 !important;
     }
     input, textarea {
-        background: var(--surface-color) !important;
-        color: var(--text-color) !important;
-        border-color: var(--border-color) !important;
+        background: #232136 !important;
+        color: #e0def4 !important;
+        border-color: #393552 !important;
     }
     .about {
-        background: var(--surface-color) !important;
+        background: #232136 !important;
     }
     .features, .functions {
-        background: var(--surface-variant) !important;
+        background: #232136 !important;
     }
     .scenes, .experience {
-        background: var(--surface-color) !important;
+        background: #28243c !important;
     }
     .placeholder { color: #8a889d !important; }
+    .section-title::after {
+        background: #b7aaff !important;
+    }
 }
 
 main {
