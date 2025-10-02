@@ -593,3 +593,45 @@ section {
         background: var(--surface-color) !important;
     }
 }
+
+/* ===== 特殊区块 ===== */
+.special {
+    background: #f6f4fa;
+    padding: 48px 0;
+}
+.special-cards {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.special-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(103,80,164,0.08);
+    padding: 32px 24px;
+    width: 320px;
+    text-align: center;
+}
+.special-card h3 {
+    color: #6750a4;
+    margin-bottom: 16px;
+}
+.special-card p {
+    margin-bottom: 24px;
+    color: #333;
+}
+.special-btn {
+    background: #7f67be;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.special-btn:hover {
+    background: #6750a4;
+}
