@@ -282,7 +282,7 @@ body {
 }
 
 /* ===== 其它区块与细节 ===== */
-.placeholder { color: #999; font-style: italic; }
+.placeholder { color: #999; }
 .highlight { color: var(--primary-color); font-weight: 500; }
 input, textarea { border: 1px solid var(--outline); }
 
