@@ -196,22 +196,20 @@ body {
     font-size: 1rem;
     border: none;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(103,80,164,0.13);
-    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    transition: background 0.2s, transform 0.1s;
     text-align: center;
     margin-top: var(--gap-sm);
     margin-bottom: var(--gap-sm);
 }
 .btn:hover, .experience-btn:hover {
     background: var(--btn-hover-bg);
-    box-shadow: 0 6px 24px rgba(103,80,164,0.18);
     transform: translateY(-2px) scale(1.03);
 }
 
 /* ===== 卡片 ===== */
 .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
     border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(103,80,164,0.10);
+    /* box-shadow: 0 4px 24px rgba(103,80,164,0.10); */ /* 取消阴影 */
     background: var(--surface-color);
     border: 1.5px solid var(--border-color);
     margin-bottom: var(--gap-md);
@@ -220,7 +218,7 @@ body {
     padding: 36px 28px;
     min-width: 260px;
     min-height: 320px;
-    transition: box-shadow 0.2s, transform 0.2s;
+    /* transition: box-shadow 0.2s, transform 0.2s; */
     flex: 1 1 320px;
     display: flex;
     flex-direction: column;
@@ -229,7 +227,7 @@ body {
     margin-bottom: var(--gap-md);
 }
 .feature-card:hover, .scene-card:hover {
-    box-shadow: 0 12px 36px rgba(103,80,164,0.18);
+    /* box-shadow: 0 12px 36px rgba(103,80,164,0.18); */
     transform: translateY(-6px) scale(1.03);
 }
 
@@ -276,7 +274,7 @@ body {
     border-radius: 50%;
     padding: 16px;
     margin-bottom: var(--gap-sm);
-    box-shadow: 0 2px 8px rgba(103,80,164,0.08);
+    /* box-shadow: 0 2px 8px rgba(103,80,164,0.08); */
     font-size: 2.6rem;
     display: inline-block;
 }
@@ -384,7 +382,7 @@ section { padding-top: var(--gap-lg); padding-bottom: var(--gap-lg); }
     padding: var(--gap-lg) 0;
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
-    box-shadow: 0 -4px 24px rgba(103,80,164,0.10);
+    /* box-shadow: 0 -4px 24px rgba(103,80,164,0.10); */
 }
 .footer .container {
     justify-content: space-between;
@@ -608,7 +606,7 @@ section {
 .special-card {
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(103,80,164,0.08);
+    /* box-shadow: 0 2px 12px rgba(103,80,164,0.08); */
     padding: 32px 24px;
     width: 320px;
     text-align: center;
@@ -634,4 +632,27 @@ section {
 }
 .special-btn:hover {
     background: #6750a4;
+}
+
+/* 暗色模式下阴影全部取消 */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        /* box-shadow: var(--shadow-navbar) !important; */
+    }
+    .btn, .experience-btn, .nav-links .btn {
+        /* box-shadow: 0 2px 16px rgba(183,170,255,0.18) !important; */
+        text-shadow: 0 1px 4px rgba(183,170,255,0.10);
+    }
+    .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
+        /* box-shadow: 0 6px 32px rgba(183,170,255,0.22) !important; */
+    }
+    .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
+        /* box-shadow: var(--shadow-card) !important; */
+    }
+    .feature-icon, .scene-icon {
+        /* box-shadow: 0 2px 12px rgba(183,170,255,0.18) !important; */
+    }
+    .footer {
+        /* box-shadow: var(--shadow-footer); */
+    }
 }
