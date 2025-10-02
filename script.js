@@ -53,3 +53,4 @@ document.querySelectorAll('.feature-card, .function-item, .scene-card').forEach(
 //     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 //     return regex.test(email);
 // }
+
