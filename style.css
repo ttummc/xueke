@@ -634,25 +634,3 @@ section {
     background: #6750a4;
 }
 
-/* 暗色模式下阴影全部取消 */
-@media (prefers-color-scheme: dark) {
-    .navbar {
-        /* box-shadow: var(--shadow-navbar) !important; */
-    }
-    .btn, .experience-btn, .nav-links .btn {
-        /* box-shadow: 0 2px 16px rgba(183,170,255,0.18) !important; */
-        text-shadow: 0 1px 4px rgba(183,170,255,0.10);
-    }
-    .btn:hover, .experience-btn:hover, .nav-links .btn:hover {
-        /* box-shadow: 0 6px 32px rgba(183,170,255,0.22) !important; */
-    }
-    .feature-card, .scene-card, .function-item, .about-img img, .hero-img img {
-        /* box-shadow: var(--shadow-card) !important; */
-    }
-    .feature-icon, .scene-icon {
-        /* box-shadow: 0 2px 12px rgba(183,170,255,0.18) !important; */
-    }
-    .footer {
-        /* box-shadow: var(--shadow-footer); */
-    }
-}
