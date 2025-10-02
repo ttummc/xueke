@@ -657,3 +657,68 @@ section {
         background: var(--surface-color) !important;
     }
 }
+
+/* 暗色模式优化 */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #181225;
+        color: #e6e1e5;
+    }
+    .my-navbar {
+        background: #23203a;
+        box-shadow: 0 2px 8px rgba(103,80,164,0.18);
+    }
+    .logo-text {
+        color: #d1c4e9;
+    }
+    .my-nav-link {
+        color: #d1c4e9;
+    }
+    .my-nav-link:focus,
+    .my-nav-link:hover {
+        background: #2d2547;
+        color: #b39ddb;
+    }
+    .my-nav-btn {
+        background: #7f67be;
+        color: #fff;
+    }
+    .my-nav-btn:focus,
+    .my-nav-btn:hover {
+        background: #b39ddb;
+    }
+    .container,
+    section,
+    .footer {
+        background: transparent;
+        color: #e6e1e5;
+    }
+    .feature-card,
+    .scene-card,
+    .function-item {
+        background: #23203a;
+        color: #e6e1e5;
+        box-shadow: 0 2px 8px rgba(103,80,164,0.18);
+    }
+    .highlight {
+        color: #ffb300;
+    }
+    .footer {
+        background: #23203a;
+        color: #b39ddb;
+    }
+    .footer-link {
+        color: #b39ddb;
+    }
+    .footer-link:hover,
+    .footer-link:focus {
+        color: #ffb300;
+    }
+    .social-icons a {
+        color: #b39ddb;
+    }
+    .social-icons a:hover,
+    .social-icons a:focus {
+        color: #ffb300;
+    }
+}
