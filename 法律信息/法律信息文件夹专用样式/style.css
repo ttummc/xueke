@@ -1,0 +1,241 @@
+/* 联系我们页面专用样式 */
+.contact-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+}
+
+.contact-section {
+    background: var(--surface-variant);
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(103,80,164,0.10);
+    padding: 48px 36px;
+    max-width: 480px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.contact-desc {
+    text-align: center;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.contact-info {
+    margin-bottom: 32px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.contact-label {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 8px;
+}
+.contact-link {
+    color: var(--text-color);
+    text-decoration: none;
+    word-break: break-all;
+}
+.contact-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.contact-form-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.contact-form {
+    margin-top: 12px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #333;
+}
+.form-group input,
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--outline);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    color: var(--text-color);
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 8px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: var(--btn-radius);
+    font-weight: 700;
+    padding: 12px 0;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(103,80,164,0.13);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-btn:hover {
+    background: var(--btn-hover-bg);
+    box-shadow: 0 6px 24px rgba(103,80,164,0.18);
+}
+
+/* 隐私政策页面专用样式 */
+.privacy-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+}
+
+.privacy-section {
+    background: var(--surface-variant);
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(103,80,164,0.10);
+    padding: 48px 36px;
+    max-width: 680px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.privacy-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.privacy-desc {
+    text-align: center;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.privacy-content h2 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.privacy-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* 用户协议页面专用样式 */
+.agreement-main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-color);
+}
+
+.agreement-section {
+    background: var(--surface-variant);
+    border-radius: 20px;
+    box-shadow: 0 4px 32px rgba(103,80,164,0.10);
+    padding: 48px 36px;
+    max-width: 680px;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.agreement-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.agreement-desc {
+    text-align: center;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.agreement-content h2 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.agreement-content p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 24px 10px;
+        max-width: 98vw;
+    }
+    .contact-title {
+        font-size: 1.4rem;
+    }
+    .privacy-section {
+        padding: 24px 10px;
+        max-width: 98vw;
+    }
+    .privacy-title {
+        font-size: 1.4rem;
+    }
+    .privacy-content h2 {
+        font-size: 1rem;
+        margin-top: 18px;
+    }
+    .agreement-section {
+        padding: 24px 10px;
+        max-width: 98vw;
+    }
+    .agreement-title {
+        font-size: 1.4rem;
+    }
+    .agreement-content h2 {
+        font-size: 1rem;
+        margin-top: 18px;
+    }
+}
