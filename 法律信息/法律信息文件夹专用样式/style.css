@@ -239,3 +239,62 @@
         margin-top: 18px;
     }
 }
+
+/* 暗色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #b7aaff;
+        --surface-color: #232136;
+        --surface-variant: #2a273f;
+        --outline: #393552;
+        --text-color: #e0def4;
+        --btn-bg: #b7aaff;
+        --btn-hover-bg: #7f67be;
+        --btn-text: #232136;
+    }
+    body,
+    .contact-main,
+    .privacy-main,
+    .agreement-main {
+        background: var(--surface-color) !important;
+        color: var(--text-color) !important;
+    }
+    .contact-section,
+    .privacy-section,
+    .agreement-section {
+        background: var(--surface-variant) !important;
+        color: var(--text-color) !important;
+        box-shadow: 0 4px 32px rgba(183,170,255,0.13) !important;
+    }
+    .contact-title,
+    .privacy-title,
+    .agreement-title,
+    .contact-label,
+    .privacy-content h2,
+    .agreement-content h2 {
+        color: var(--primary-color) !important;
+    }
+    .contact-link,
+    .privacy-content p,
+    .agreement-content p {
+        color: var(--text-color) !important;
+    }
+    .form-group input,
+    .form-group textarea {
+        background: #232136 !important;
+        color: var(--text-color) !important;
+        border-color: var(--outline) !important;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: var(--primary-color) !important;
+    }
+    .contact-btn {
+        background: var(--btn-bg) !important;
+        color: var(--btn-text) !important;
+    }
+    .contact-btn:hover {
+        background: var(--btn-hover-bg) !important;
+        color: var(--btn-text) !important;
+    }
+}
