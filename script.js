@@ -2,10 +2,7 @@
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
-document.getElementById('hamburger').addEventListener('click', function() {
-    const navLinks = document.getElementById('navLinks');
-    const expanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !expanded);
+hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
