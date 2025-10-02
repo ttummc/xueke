@@ -11,30 +11,29 @@
 <body>
     <!-- 导航栏 -->
     <header>
-        <nav class="navbar" aria-label="主导航">
+        <nav class="navbar my-navbar" aria-label="主导航">
             <div class="container">
                 <a href="#" class="logo" aria-label="学科模拟器首页">
                     <!-- 实验瓶SVG -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                         <path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#6750a4"/>
                         <circle cx="12" cy="17" r="1.5" fill="#7f67be"/>
                     </svg>
-                    <span>学科模拟器</span>
+                    <span class="logo-text">学科模拟器</span>
                 </a>
-                <button class="hamburger" id="hamburger" aria-label="展开菜单" aria-controls="navLinks" aria-expanded="false">
-                    <!-- 汉堡SVG -->
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <button class="hamburger my-hamburger" id="hamburger" aria-label="展开菜单" aria-controls="navLinks" aria-expanded="false">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                         <rect y="4" width="24" height="2" rx="1" fill="#6750a4"/>
                         <rect y="11" width="24" height="2" rx="1" fill="#6750a4"/>
                         <rect y="18" width="24" height="2" rx="1" fill="#6750a4"/>
                     </svg>
                 </button>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#features">核心特色</a></li>
-                    <li><a href="#functions">功能展示</a></li>
-                    <li><a href="#scenes">适用场景</a></li>
-                    <li><a href="#about">关于我们</a></li>
-                    <li><a href="#experience" class="btn">立即体验</a></li>
+                <ul class="nav-links my-nav-links" id="navLinks">
+                    <li><a href="#features" class="my-nav-link">核心特色</a></li>
+                    <li><a href="#functions" class="my-nav-link">功能展示</a></li>
+                    <li><a href="#scenes" class="my-nav-link">适用场景</a></li>
+                    <li><a href="#about" class="my-nav-link">关于我们</a></li>
+                    <li><a href="#experience" class="btn my-nav-btn">立即体验</a></li>
                 </ul>
             </div>
         </nav>
