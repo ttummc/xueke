@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 · 学科模拟器</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#6750a4;
+      --primary-variant:#7f67be;
+      --bg-from: #7f67be;
+      --bg-to: #5c3f99;
+      --surface:#ffffff;
+      --muted:#6b5f76;
+      --radius:20px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+      background: linear-gradient(135deg,var(--bg-from),var(--bg-to));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:grid;
+      place-items:center;
+      color:#111;
+    }
+
+    .card{
+      width: min(920px, 92vw);
+      background: var(--surface);
+      border-radius: calc(var(--radius) + 4px);
+      padding: clamp(28px, 4vw, 48px);
+      text-align:center;
+      display:grid;
+      gap:18px;
+      align-items:center;
+      /* 保持极简，无阴影 */
+    }
+
+    .brand{
+      width:96px;
+      height:96px;
+      margin:0 auto;
+      border-radius:50%;
+      background: var(--primary);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .brand img{
+      width:52%;
+      height:52%;
+      display:block;
+      filter: none;
+    }
+
+    h1{
+      margin:8px 0 0 0;
+      font-weight:700;
+      color:var(--primary);
+      font-size: clamp(48px, 8vw, 86px);
+      line-height:0.92;
+      letter-spacing:-0.02em;
+    }
+
+    .lead{
+      margin-top:4px;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    p.desc{
+      margin:0;
+      color:var(--muted);
+      max-width:66ch;
+      margin-left:auto;
+      margin-right:auto;
+      font-size:0.98rem;
+      line-height:1.6;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      margin-top:8px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      appearance:none;
+      border:0;
+      background:var(--primary);
+      color:#fff;
+      padding:12px 20px;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      cursor:pointer;
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--primary);
+      border:1.5px solid rgba(103,80,164,0.12);
+    }
+
+    footer{
+      margin-top:6px;
+      font-size:0.86rem;
+      color:var(--muted);
+    }
+
+    @media (prefers-color-scheme: dark){
+      body{background: linear-gradient(135deg,#4c2f7a,#3b245f);}
+      .card{background: rgba(255,255,255,0.03); color:#fff}
+      .brand{box-shadow:none}
+      .lead,.desc,footer{color:rgba(255,255,255,0.82)}
+      .btn.secondary{border-color: rgba(255,255,255,0.08); color:#fff}
+    }
+  </style>
+</head>
+<body>
+  <main role="main" class="card" aria-labelledby="title">
+    <div class="brand" aria-hidden="true">
+      <img src="icon.svg" alt="学科模拟器 标志">
+    </div>
+
+    <h1 id="title">404</h1>
+    <div class="lead">页面不存在 · 但知识还在等你探索</div>
+
+    <p class="desc">
+      可能是链接已过期、拼写错误或页面已移除。返回首页继续体验沉浸式互动场景，或通过导航寻找所需内容。
+    </p>
+
+    <div class="actions">
+      <a class="btn" href="./index.html" title="返回首页">返回首页</a>
+      <a class="btn secondary" href="mailto:feedback@example.com" title="反馈问题">报告问题</a>
+    </div>
+
+    <footer aria-hidden="true">学科模拟器 · © 2025</footer>
+  </main>
+</body>
+</html>
