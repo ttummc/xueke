@@ -1,4 +1,2 @@
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-<path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#fff"/>
-<circle cx="12" cy="17" r="1.5" fill="#d1c4e9"/>
-</svg>
+<path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#6750a4"/>
+<circle cx="12" cy="17" r="1.5" fill="#7f67be"/>
