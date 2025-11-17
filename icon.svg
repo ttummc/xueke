@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+  <path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#ffffff"/>
+  <circle cx="12" cy="17" r="1.5" fill="#ffffff"/>
+</svg>
+```// filepath: vscode-vfs://github/ttummc/xueke/icon.svg
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+  <path d="M7 2v2h1v5.09l-4.42 7.36A4 4 0 0 0 7.13 22h9.74a4 4 0 0 0 3.55-5.55L16 9.09V4h1V2H7zm3 2h4v5.68l.29.48 4.13 6.88A2 2 0 0 1 16.87 20H7.13a2 2 0 0 1-1.72-2.96l4.13-6.88.29-.48V4z" fill="#ffffff"/>
+  <circle cx="12" cy="17" r="1.5" fill="#ffffff"/>
+</svg>
