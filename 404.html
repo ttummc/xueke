@@ -7,14 +7,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --primary:#ffffff;
-      --primary-variant:#b9a5eb;
-      --bg-from: #d6c6fe;
-      --bg-to: #5c3f99;
-      --surface:#ffffff;
-      --muted:#6b5f76;
+      /* 主要背景/界面使用白色，紫色作为次要/品牌色 */
+      --surface: #ffffff;        /* 页面主要表面色（白色） */
+      --secondary: #6750a4;      /* 品牌紫色（次要色） */
+      --secondary-variant: #7f67be;
+      --bg-from: #ffffff;
+      --bg-to: #f7f4ff;          /* 微弱紫色渐变 */
+      --muted: #6b5f76;
+      --text: #111111;
       --radius:20px;
     }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -25,7 +28,7 @@
       -moz-osx-font-smoothing:grayscale;
       display:grid;
       place-items:center;
-      color:#111;
+      color:var(--text);
     }
 
     .card{
@@ -45,7 +48,7 @@
       height:96px;
       margin:0 auto;
       border-radius:50%;
-      background: var(--primary);
+      background: var(--secondary); /* 紫色背景，白色图标居中 */
       display:flex;
       align-items:center;
       justify-content:center;
@@ -60,7 +63,7 @@
     h1{
       margin:8px 0 0 0;
       font-weight:700;
-      color:var(--primary);
+      color:var(--secondary); /* 标题用品牌紫色凸显 */
       font-size: clamp(48px, 8vw, 86px);
       line-height:0.92;
       letter-spacing:-0.02em;
@@ -93,7 +96,7 @@
     .btn{
       appearance:none;
       border:0;
-      background:var(--primary);
+      background:var(--secondary); /* 主要操作为紫色按钮 */
       color:#fff;
       padding:12px 20px;
       border-radius:12px;
@@ -107,7 +110,7 @@
 
     .btn.secondary{
       background:transparent;
-      color:var(--primary);
+      color:var(--secondary);
       border:1.5px solid rgba(103,80,164,0.12);
     }
 
@@ -117,13 +120,32 @@
       color:var(--muted);
     }
 
+    /* 自动识别系统暗色模式：暗色时使用黑色为主背景，卡片和文本适配 */
     @media (prefers-color-scheme: dark){
-      body{background: linear-gradient(135deg,#4c2f7a,#3b245f);}
-      .card{background: rgba(255,255,255,0.03); color:#fff}
-      .brand{box-shadow:none}
-      .lead,.desc,footer{color:rgba(255,255,255,0.82)}
-      .btn.secondary{border-color: rgba(255,255,255,0.08); color:#fff}
+      :root{
+        --surface: #0b0b0b;   /* 卡片背景深色 */
+        --bg-from: #000000;   /* 页面背景黑色 */
+        --bg-to: #000000;
+        --text: #ffffff;
+        --muted: rgba(255,255,255,0.8);
+        --secondary: #7f67be; /* 稍亮的紫色在暗色中作为次要色 */
+      }
+      body{
+        background: linear-gradient(135deg,var(--bg-from),var(--bg-to));
+        color:var(--text);
+      }
+      .card{
+        background: var(--surface);
+        color:var(--text);
+      }
+      .brand{
+        background: var(--secondary);
+      }
+      .lead,.desc,footer{ color: var(--muted); }
+      .btn.secondary{ border-color: rgba(255,255,255,0.08); color:var(--secondary); }
     }
+
+    /* ...existing code... */
   </style>
 </head>
 <body>
