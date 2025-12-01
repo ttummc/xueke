@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>学科模拟器 — 更新记录</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f3f4f6;            /* 页面背景（浅） */
+      --surface: #ffffff;       /* 卡片表面 */
+      --text: #0b0b0b;          /* 主要文字 */
+      --muted: #6b6f76;         /* 次要文字 */
+      --accent: #0078d4;        /* Microsoft 风格主色（蓝） */
+      --radius: 12px;
+      --border: rgba(11,11,11,0.06);
+      --gap: 16px;
+      --maxw: 980px;
+      --shadow: none;           /* 保持简约，无明显阴影 */
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0}
+    body{
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      display:flex;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:var(--gap);
+    }
+    .logo {
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background:var(--accent);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:18px;
+    }
+    header h1{
+      font-size:1.25rem;
+      margin:0;
+      font-weight:600;
+      color:var(--text);
+    }
+    header p{
+      margin:4px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .controls{
+      display:flex;
+      gap:12px;
+      margin:18px 0;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .search{
+      flex:1 1 320px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:10px;
+    }
+    .search input{
+      border:0;
+      outline:0;
+      font-size:0.98rem;
+      width:100%;
+      background:transparent;
+      color:var(--text);
+    }
+    .btn{
+      background:var(--accent);
+      color:#fff;
+      border:0;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:600;
+      text-decoration:none;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      cursor:pointer;
+    }
+    .btn.ghost{
+      background:transparent;
+      color:var(--accent);
+      border:1px solid rgba(0,120,212,0.12);
+    }
+
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+
+    .entry{
+      background:var(--surface);
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:14px;
+      display:grid;
+      grid-template-columns:120px 1fr 140px;
+      gap:12px;
+      align-items:center;
+    }
+    .meta{
+      font-size:0.92rem;
+      color:var(--muted);
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .meta .ver{font-weight:700;color:var(--text);font-size:1rem}
+    .changes{font-size:0.95rem;color:var(--text);}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{
+      background: rgba(0,120,212,0.08);
+      color:var(--accent);
+      padding:6px 8px;
+      border-radius:999px;
+      font-size:0.82rem;
+      font-weight:600;
+    }
+    .actions{
+      justify-self:end;
+      display:flex;
+      gap:8px;
+    }
+    .small{
+      font-size:0.9rem;color:var(--muted)
+    }
+
+    /* 响应式：窄屏改为纵向布局 */
+    @media (max-width:760px){
+      .entry{grid-template-columns:1fr;align-items:flex-start}
+      .actions{justify-self:start}
+    }
+
+    /* 暗色模式支持：背景变黑，卡片深色，文字变白 */
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b0b0b;
+        --surface: #111213;
+        --text: #f5f5f5;
+        --muted: #b9bdc3;
+        --border: rgba(255,255,255,0.04);
+        --accent: #2b88ff;
+      }
+      body{background:var(--bg)}
+      .logo{background:var(--accent); color:#fff}
+      .search{background:var(--surface)}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="changelog-title">
+    <header>
+      <div class="logo" aria-hidden="true">学</div>
+      <div>
+        <h1 id="changelog-title">学科模拟器 — 更新记录</h1>
+        <p>遵循 Microsoft 设计语言，简洁、可读、支持暗色模式。</p>
+      </div>
+    </header>
+
+    <div class="controls" role="region" aria-label="筛选与操作">
+      <div class="search" role="search" aria-label="搜索更新">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <input id="q" type="search" placeholder="搜索版本、修复或关键字（例如：导出、性能）" />
+      </div>
+
+      <button class="btn" id="download-json" title="导出为 JSON">导出 JSON</button>
+      <a class="btn ghost" href="./index.html" title="返回首页">返回首页</a>
+    </div>
+
+    <section class="list" id="changelog-list" aria-live="polite">
+      <!-- 示例条目：按时间降序排列 -->
+      <article class="entry" data-title="v1.3.0 功能增强 导出 支持多格式" data-tags="导出,性能,云分享">
+        <div class="meta">
+          <div class="ver">v1.3.0</div>
+          <div class="small">2025-11-16 · 稳定发布</div>
+        </div>
+        <div>
+          <div class="changes">
+            - 新增：反馈表导出为 XLSX / CSV，共享后可直接下载。<br>
+            - 优化：场景加载性能，启动时间平均减少 35%。<br>
+            - 修复：修复某些浏览器下分享码解析失败的问题。
+          </div>
+          <div class="tags" aria-hidden="true">
+            <span class="tag">导出</span>
+            <span class="tag">性能</span>
+            <span class="tag">云分享</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" onclick="copyEntry(this)" title="复制更新摘要">复制摘要</button>
+        </div>
+      </article>
+
+      <article class="entry" data-title="v1.2.0 UI 优化 本地存储" data-tags="UI,存储">
+        <div class="meta">
+          <div class="ver">v1.2.0</div>
+          <div class="small">2025-09-02 · 迭代</div>
+        </div>
+        <div>
+          <div class="changes">
+            - 调整：主页和卡片样式更新，采用更简洁的 Microsoft 风格配色。<br>
+            - 新增：本地保存功能，允许导出/导入本地进度文件。<br>
+            - 修复：若干界面对比度与可访问性问题。
+          </div>
+          <div class="tags" aria-hidden="true"><span class="tag">UI</span><span class="tag">存储</span></div>
+        </div>
+        <div class="actions"><button class="btn" onclick="copyEntry(this)">复制摘要</button></div>
+      </article>
+
+      <article class="entry" data-title="v1.0.0 初始发布" data-tags="发布,核心">
+        <div class="meta">
+          <div class="ver">v1.0.0</div>
+          <div class="small">2025-06-10 · 首发</div>
+        </div>
+        <div>
+          <div class="changes">
+            - 初始版本：核心场景、交互与场景编辑器。<br>
+            - 支持分享码与课堂演示模式。<br>
+            - 包含示例数据与教学模版。
+          </div>
+          <div class="tags" aria-hidden="true"><span class="tag">发布</span><span class="tag">核心</span></div>
+        </div>
+        <div class="actions"><button class="btn" onclick="copyEntry(this)">复制摘要</button></div>
+      </article>
+    </section>
+  </div>
+
+  <script>
+    // 简单搜索与导出功能
+    const q = document.getElementById('q');
+    const list = document.getElementById('changelog-list');
+
+    q.addEventListener('input', ()=> {
+      const v = q.value.trim().toLowerCase();
+      Array.from(list.children).forEach(item=>{
+        const title = item.dataset.title.toLowerCase();
+        const tags = (item.dataset.tags||'').toLowerCase();
+        const text = (item.innerText||'').toLowerCase();
+        const show = !v || title.includes(v) || tags.includes(v) || text.includes(v);
+        item.style.display = show ? '' : 'none';
+      });
+    });
+
+    document.getElementById('download-json').addEventListener('click', ()=>{
+      const entries = Array.from(list.children).map(item=>{
+        return {
+          version: item.querySelector('.ver')?.innerText || '',
+          date: item.querySelector('.small')?.innerText || '',
+          notes: item.querySelector('.changes')?.innerHTML.replace(/<br\s*\/?>/g,'\n').trim(),
+          tags: (item.dataset.tags||'').split(',').map(s=>s.trim()).filter(Boolean)
+        };
+      });
+      const blob = new Blob([JSON.stringify(entries, null, 2)], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'xueke-changelog.json';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+
+    function copyEntry(btn){
+      const entry = btn.closest('.entry');
+      const ver = entry.querySelector('.ver').innerText;
+      const notes = entry.querySelector('.changes').innerText;
+      navigator.clipboard?.writeText(`${ver}\n\n${notes}`) .then(()=> {
+        btn.innerText = '已复制';
+        setTimeout(()=> btn.innerText = '复制摘要', 1500);
+      }).catch(()=> {
+        alert('复制失败，请手动选择文本复制。');
+      });
+    }
+  </script>
+</body>
+</html>
