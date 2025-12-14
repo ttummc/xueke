@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学科模拟器 - 合作意向</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* 主体内容样式 */
+        .main-content {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+        
+        .合作模式 {
+            margin-bottom: 40px;
+        }
+        
+        .合作模式 p, .激活码机制 p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .合作模式 ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .合作模式 li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1.05rem;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #3498db;
+            margin: 25px 0;
+        }
+        
+        .highlight p {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+        
+        /* 联系方式样式 */
+        .联系方式 {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4eaf5 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-card p {
+            color: #555;
+            font-size: 1rem;
+            word-break: break-all;
+        }
+        
+        .contact-card a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-card a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        /* 底部样式 */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content, .联系方式 {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header {
+                padding: 30px 0;
+            }
+            
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content p {
+                font-size: 1rem;
+            }
+            
+            .main-content, .联系方式 {
+                padding: 20px;
+            }
+            
+            .highlight {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container header-content">
+            <h1>学科模拟器 - 合作意向</h1>
+            <p>携手共赢，打造优质学科模拟体验，实现用户双向引流</p>
+        </div>
+    </header>
+    
+    <!-- 主体内容区域 -->
+    <div class="container">
+        <div class="main-content">
+            <section class="合作模式">
+                <h2 class="section-title">合作模式</h2>
+                <p>我们诚邀各类创作者/平台进行合作，通过以下方式实现互利共赢：</p>
+                <ul>
+                    <li>合作方在其作品/平台中举办相关活动（如连续签到、完成指定任务等）</li>
+                    <li>活动奖励为学科模拟器专业版激活密钥</li>
+                    <li>学科模拟器官方将在产品中宣传合作方作品，引导用户参与合作方活动</li>
+                    <li>实现双方用户群体的双向引流，共同提升作品影响力</li>
+                </ul>
+                
+                <div class="highlight">
+                    <p>✨ 合作优势：零成本合作，无需额外投入，双方共享用户资源，实现互利共赢！</p>
+                </div>
+            </section>
+            
+            <section class="激活码机制">
+                <h2 class="section-title">激活码实现机制</h2>
+                <p>为确保激活码的安全性和唯一性，我们采用以下机制：</p>
+                <p>1. 约定复杂的函数计算公式（高度加密，防止破译）</p>
+                <p>2. 以训练师编号（x）作为计算参数</p>
+                <p>3. 通过公式计算得出唯一激活码（y）</p>
+                <p>4. 每个账号的激活码仅限该账号使用，确保安全性和公平性</p>
+            </section>
+        </div>
+        
+        <!-- 联系方式区域 -->
+        <section class="联系方式">
+            <h2 class="section-title">联系方式</h2>
+            <p>如有合作意向，欢迎通过以下方式联系我们：</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>QQ</h3>
+                    <p>481029429</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>邮箱</h3>
+                    <p><a href="mailto:tianunj1@qq.com">tianunj1@qq.com</a></p>
+                    <p><a href="mailto:tjh541885201314@outlook.com">tjh541885201314@outlook.com</a></p>
+                    <p><a href="mailto:tianunj1@gmail.com">tianunj1@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🎬</div>
+                    <h3>哔哩哔哩</h3>
+                    <p><a href="https://space.bilibili.com/3546741330675778" target="_blank">3546741330675778</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>其他方式</h3>
+                    <p>在作品评论区留言联系</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- 底部区域 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 学科模拟器 版权所有 | 合作共赢，共创美好</p>
+        </div>
+    </footer>
+</body>
+</html>
